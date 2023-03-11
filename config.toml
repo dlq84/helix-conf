@@ -1,0 +1,22 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "always"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+
+[editor.indent-guides]
+render = true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "workspace-diagnostics", "selections", "position", "total-line-numbers"]
