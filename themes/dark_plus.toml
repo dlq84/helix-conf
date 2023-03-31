@@ -89,6 +89,7 @@
 "ui.virtual.whitespace" = { fg = "dark_gray" }
 "ui.virtual.ruler" = { bg = "borders" }
 "ui.virtual.indent-guide" = { fg = "dark_gray4" }
+"ui.virtual.inlay-hint" = { fg = "white", bg = "#444444" }
 
 "warning" = { fg = "gold2" }
 "error" = { fg = "red" }
@@ -96,6 +97,9 @@
 "hint" = { fg = "light_gray3" }
 
 "diagnostic.error".underline = { color = "red", style = "curl" }
+"diagnostic.info".underline = { color = "light_blue", stule = "curl" }
+"diagnostic.warning".underline = { color = "gold2", style = "curl" }
+"diagnostic.hint".underline = { color = "light_gray3", style = "curl" }
 "diagnostic".underline = { color = "gold", style = "curl" }
 
 [palette]

@@ -17,6 +17,6 @@ display-messages = true
 render = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "version-control"]
 center = ["file-name", "file-encoding", "file-line-ending", "file-type"]
 right = ["diagnostics", "workspace-diagnostics", "selections", "position", "total-line-numbers"]
