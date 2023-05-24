@@ -1,7 +1,31 @@
+[language-server.graphql]
+command = "graphql-lsp"
+args = ["server", "-m", "stream"]
+
+[language-server.eslint]
+command = "eslint-language-server"
+args = ["--stdio"]
+
+[language-server.tailwindcss]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
 [[language]]
 name = "graphql"
-language-server = { command = "graphql-lsp", args = ["server", "-m", "stream"] }
+language-servers = [ "graphql" ]
 
 [[language]]
 name = "dockerfile"
 file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile", "Dockerfile.dev"]
+
+[[language]]
+name = "typescript"
+scope = "source.ts"
+injection-regex = "(ts|typescript)"
+file-types = ["ts", "mts", "cts"]
+language-id = "typescript"
+shebangs = []
+roots = []
+# TODO: highlights-params
+language-servers = [ "typescript-language-server" ]
+indent = { tab-width = 2, unit = "  " }
