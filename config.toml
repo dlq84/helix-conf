@@ -5,6 +5,13 @@ line-number = "relative"
 cursorline = true
 bufferline = "always"
 mouse = false
+scrolloff = 10
+completion-replace = true
+rulers = [120]
+color-modes = true
+
+[editor.file-picker]
+hidden = false
 
 [editor.cursor-shape]
 insert = "bar"

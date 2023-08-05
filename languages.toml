@@ -2,9 +2,25 @@
 command = "graphql-lsp"
 args = ["server", "-m", "stream"]
 
-[language-server.eslint]
+[language-server.eslint-lsp]
 command = "eslint-language-server"
 args = ["--stdio"]
+
+# [language-server.eslint.config]
+# format = false
+# nodePath = ""
+# onIgnoredFiles = "off"
+# packageManager = "yarn"
+# quiet = false
+# rulesCustomizations = []
+# run = "onType"
+# useESLintClass = false
+# validate = "on"
+# codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+# codeActionOnSave = { mode = "all" }
+# experimental = { }
+# problems = { shortenToSingleLine = false }
+# workingDirectory = { mode = "auto" }
 
 [language-server.tailwindcss]
 command = "tailwindcss-language-server"
@@ -18,14 +34,21 @@ language-servers = [ "graphql" ]
 name = "dockerfile"
 file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile", "Dockerfile.dev"]
 
-[[language]]
-name = "typescript"
-scope = "source.ts"
-injection-regex = "(ts|typescript)"
-file-types = ["ts", "mts", "cts"]
-language-id = "typescript"
-shebangs = []
-roots = []
+
+# [[language]]
+# name = "typescript"
+# language-servers = [ "typescript-language-server", "eslint-language-server" ]
+# language-servers = [ {name = "eslint-lsp", except-features = [ "format" ]} ]
+
+
+# [[language]]
+# name = "typescript"
+# scope = "source.ts"
+# injection-regex = "(ts|typescript)"
+# file-types = ["ts", "mts", "cts"]
+# language-id = "typescript"
+# shebangs = []
+# roots = []
 # TODO: highlights-params
-language-servers = [ "typescript-language-server" ]
-indent = { tab-width = 2, unit = "  " }
+# language-servers = [ "typescript-language-server" ]
+# indent = { tab-width = 2, unit = "  " }
