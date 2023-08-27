@@ -6,7 +6,7 @@ cursorline = true
 bufferline = "always"
 mouse = false
 scrolloff = 10
-completion-replace = true
+completion-replace = false
 rulers = [120]
 color-modes = true
 
