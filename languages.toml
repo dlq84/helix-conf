@@ -2,25 +2,25 @@
 command = "graphql-lsp"
 args = ["server", "-m", "stream"]
 
-[language-server.eslint-lsp]
+[language-server.eslint]
 command = "eslint-language-server"
 args = ["--stdio"]
 
-# [language-server.eslint.config]
-# format = false
-# nodePath = ""
-# onIgnoredFiles = "off"
-# packageManager = "yarn"
-# quiet = false
-# rulesCustomizations = []
-# run = "onType"
-# useESLintClass = false
-# validate = "on"
-# codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
-# codeActionOnSave = { mode = "all" }
-# experimental = { }
-# problems = { shortenToSingleLine = false }
-# workingDirectory = { mode = "auto" }
+[language-server.eslint.config]
+validate = "on"
+packageManager = "yarn"
+useESLintClass = false
+experimental = { useFlatConfig = false }
+codeActionOnSave = { enabled = false, mode = "all" }
+format = false
+quiet = false
+onIgnoredFiles = "off"
+rulesCustomizations = []
+run = "onType"
+problems = { shortenToSingleLine = false }
+nodePath = ""
+workingDirectory = { mode = "location" }
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
 
 [language-server.tailwindcss]
 command = "tailwindcss-language-server"
@@ -34,21 +34,18 @@ language-servers = [ "graphql" ]
 name = "dockerfile"
 file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile", "Dockerfile.dev"]
 
+[[language]]
+name = "typescript"
+language-servers = [ {name = "typescript-language-server", except-features = [ "format" ]}, {name = "eslint", except-features = [ "format" ]} ]
 
-# [[language]]
-# name = "typescript"
-# language-servers = [ "typescript-language-server", "eslint-language-server" ]
-# language-servers = [ {name = "eslint-lsp", except-features = [ "format" ]} ]
+[[language]]
+name = "tsx"
+language-servers = [ {name = "typescript-language-server", except-features = [ "format" ]}, {name = "eslint", except-features = [ "format" ]} ]
 
+[[language]]
+name = "javascript"
+language-servers = [ {name = "typescript-language-server", except-features = [ "format" ]}, {name = "eslint", except-features = [ "format" ]} ]
 
-# [[language]]
-# name = "typescript"
-# scope = "source.ts"
-# injection-regex = "(ts|typescript)"
-# file-types = ["ts", "mts", "cts"]
-# language-id = "typescript"
-# shebangs = []
-# roots = []
-# TODO: highlights-params
-# language-servers = [ "typescript-language-server" ]
-# indent = { tab-width = 2, unit = "  " }
+[[language]]
+name = "jsx"
+language-servers = [ {name = "typescript-language-server", except-features = [ "format" ]}, {name = "eslint", except-features = [ "format" ]} ]
