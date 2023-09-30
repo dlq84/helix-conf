@@ -49,3 +49,8 @@ language-servers = [ {name = "typescript-language-server", except-features = [ "
 [[language]]
 name = "jsx"
 language-servers = [ {name = "typescript-language-server", except-features = [ "format" ]}, {name = "eslint", except-features = [ "format" ]} ]
+
+[[language]]
+name = "rust"
+formatter = { command = 'rustfmt' }
+auto-format = true
